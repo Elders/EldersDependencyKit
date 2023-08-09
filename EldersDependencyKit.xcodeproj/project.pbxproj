@@ -32,7 +32,6 @@
 		17F2AA6A2A83B28400C35C32 /* EldersDependencyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EldersDependencyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F2AA6F2A83B28400C35C32 /* EldersDependencyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersDependencyKitTests.swift; sourceTree = "<group>"; };
 		17F2AA7A2A83B40E00C35C32 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		17F2AA7B2A83B43200C35C32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		17F2AA7D2A83B4BE00C35C32 /* EldersDependencyKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = EldersDependencyKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				17F2AA7D2A83B4BE00C35C32 /* EldersDependencyKit.podspec */,
-				17F2AA7B2A83B43200C35C32 /* README.md */,
 				17F2AA7A2A83B40E00C35C32 /* LICENSE */,
 				17F2AA622A83B28400C35C32 /* EldersDependencyKit */,
 				17F2AA6E2A83B28400C35C32 /* EldersDependencyKitTests */,
