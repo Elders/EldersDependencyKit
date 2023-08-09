@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EldersDependencyKit'
-  s.version          = '0.1.0'
+  s.version          = '0.3.0'
   s.summary          = 'Lightweight dependency injection library written in Swift.'
  
   s.description      = <<-DESC
