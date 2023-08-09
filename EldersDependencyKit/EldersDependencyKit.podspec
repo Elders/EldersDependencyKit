@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EldersDependencyKit'
-  s.version          = '0.3.0'
+  s.version          = '0.1.0'
   s.summary          = 'Lightweight dependency injection library written in Swift.'
  
   s.description      = <<-DESC
@@ -16,5 +16,6 @@ Lightweight dependency injection library written in Swift, relying on property w
   s.ios.deployment_target = "11.0"
 
   s.source_files  = "#{s.name}/**/*.swift", "#{s.name}/**/*.{h,m}"
+  s.public_header_files = "#{s.name}/**/*.h"
  
 end

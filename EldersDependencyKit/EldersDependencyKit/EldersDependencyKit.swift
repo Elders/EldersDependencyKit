@@ -30,17 +30,17 @@ public class DependencyContainer {
     private var dependencies = [String: AnyObject]()
     private static var shared = DependencyContainer()
     
-    static func register<T>(_ dependency: T) {
+    public static func register<T>(_ dependency: T) {
         
         shared.register(dependency)
     }
     
-    static func resolve<T>() -> T {
+    public static func resolve<T>() -> T {
         
         shared.resolve()
     }
     
-    static func resolve<T>(key: String) -> T {
+    public static func resolve<T>(key: String) -> T {
         
         shared.resolve(key: key)
     }
@@ -56,7 +56,7 @@ public class DependencyContainer {
         dependencies[key] = dependency as AnyObject
     }
     
-    static func deregister<T>(_ dependency: T) {
+    public static func deregister<T>(_ dependency: T) {
         shared.deregister(dependency)
     }
     
