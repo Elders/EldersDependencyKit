@@ -8,7 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1710D2282A826E5800B59A41 /* EldersDependencyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710D2272A826E5800B59A41 /* EldersDependencyKit.swift */; };
+		1710D2352A83733100B59A41 /* EldersDependencyKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710D2342A83733100B59A41 /* EldersDependencyKitTests.swift */; };
+		1710D2362A83733100B59A41 /* libEldersDependencyKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1710D2242A826E5800B59A41 /* libEldersDependencyKit.a */; platformFilter = ios; };
+		1710D23C2A837A1A00B59A41 /* EldersDependencyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710D2272A826E5800B59A41 /* EldersDependencyKit.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1710D2372A83733100B59A41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1710D21C2A826E5800B59A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1710D2232A826E5800B59A41;
+			remoteInfo = EldersDependencyKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1710D2222A826E5800B59A41 /* CopyFiles */ = {
@@ -25,6 +38,8 @@
 /* Begin PBXFileReference section */
 		1710D2242A826E5800B59A41 /* libEldersDependencyKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEldersDependencyKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1710D2272A826E5800B59A41 /* EldersDependencyKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersDependencyKit.swift; sourceTree = "<group>"; };
+		1710D2322A83733100B59A41 /* EldersDependencyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EldersDependencyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1710D2342A83733100B59A41 /* EldersDependencyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersDependencyKitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +50,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1710D22F2A83733100B59A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1710D2362A83733100B59A41 /* libEldersDependencyKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				1710D2262A826E5800B59A41 /* EldersDependencyKit */,
+				1710D2332A83733100B59A41 /* EldersDependencyKitTests */,
 				1710D2252A826E5800B59A41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1710D2242A826E5800B59A41 /* libEldersDependencyKit.a */,
+				1710D2322A83733100B59A41 /* EldersDependencyKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +85,14 @@
 				1710D2272A826E5800B59A41 /* EldersDependencyKit.swift */,
 			);
 			path = EldersDependencyKit;
+			sourceTree = "<group>";
+		};
+		1710D2332A83733100B59A41 /* EldersDependencyKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1710D2342A83733100B59A41 /* EldersDependencyKitTests.swift */,
+			);
+			path = EldersDependencyKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +115,24 @@
 			productReference = 1710D2242A826E5800B59A41 /* libEldersDependencyKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		1710D2312A83733100B59A41 /* EldersDependencyKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1710D2392A83733100B59A41 /* Build configuration list for PBXNativeTarget "EldersDependencyKitTests" */;
+			buildPhases = (
+				1710D22E2A83733100B59A41 /* Sources */,
+				1710D22F2A83733100B59A41 /* Frameworks */,
+				1710D2302A83733100B59A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1710D2382A83733100B59A41 /* PBXTargetDependency */,
+			);
+			name = EldersDependencyKitTests;
+			productName = EldersDependencyKitTests;
+			productReference = 1710D2322A83733100B59A41 /* EldersDependencyKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +144,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					1710D2232A826E5800B59A41 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					1710D2312A83733100B59A41 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -111,9 +165,20 @@
 			projectRoot = "";
 			targets = (
 				1710D2232A826E5800B59A41 /* EldersDependencyKit */,
+				1710D2312A83733100B59A41 /* EldersDependencyKitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1710D2302A83733100B59A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1710D2202A826E5800B59A41 /* Sources */ = {
@@ -124,7 +189,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1710D22E2A83733100B59A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1710D23C2A837A1A00B59A41 /* EldersDependencyKit.swift in Sources */,
+				1710D2352A83733100B59A41 /* EldersDependencyKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1710D2382A83733100B59A41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 1710D2232A826E5800B59A41 /* EldersDependencyKit */;
+			targetProxy = 1710D2372A83733100B59A41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1710D2292A826E5800B59A41 /* Debug */ = {
@@ -267,6 +350,46 @@
 			};
 			name = Release;
 		};
+		1710D23A2A83733100B59A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49G6Q2K6NS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elders.EldersDependencyKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1710D23B2A83733100B59A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49G6Q2K6NS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elders.EldersDependencyKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +407,15 @@
 			buildConfigurations = (
 				1710D22C2A826E5800B59A41 /* Debug */,
 				1710D22D2A826E5800B59A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1710D2392A83733100B59A41 /* Build configuration list for PBXNativeTarget "EldersDependencyKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1710D23A2A83733100B59A41 /* Debug */,
+				1710D23B2A83733100B59A41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

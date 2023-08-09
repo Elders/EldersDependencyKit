@@ -5,10 +5,27 @@
 //  Created by Svetlomir Zhelev on 8/8/23.
 //
 
-
 public protocol Injectable {}
 
-class DependencyContainer {
+@propertyWrapper
+public struct Inject<T> {
+    public var wrappedValue: T
+    
+    public init() {
+        self.wrappedValue = DependencyContainer.resolve()
+    }
+}
+
+@propertyWrapper
+public struct InjectByKey<T> {
+    public var wrappedValue: T
+    
+    public init(key: String) {
+        self.wrappedValue = DependencyContainer.resolve(key: key)
+    }
+}
+
+public class DependencyContainer {
     
     private var dependencies = [String: AnyObject]()
     private static var shared = DependencyContainer()
@@ -23,9 +40,19 @@ class DependencyContainer {
         shared.resolve()
     }
     
+    static func resolve<T>(key: String) -> T {
+        
+        shared.resolve(key: key)
+    }
+    
     private func register<T>(_ dependency: T) {
         
         let key = String(describing: T.self)
+        dependencies[key] = dependency as AnyObject
+    }
+    
+    private func register<T>(_ dependency: T, key: String) {
+        
         dependencies[key] = dependency as AnyObject
     }
     
@@ -47,14 +74,13 @@ class DependencyContainer {
         
         return dependency!
     }
-}
-
-@propertyWrapper
-public struct Inject<T> {
-    public var wrappedValue: T
     
-    public init() {
-        self.wrappedValue = DependencyContainer.resolve()
+    private func resolve<T>(key: String) -> T {
+        let dependency = dependencies[key] as? T
+        
+        assert(dependency != nil, "No dependency found")
+        
+        return dependency!
     }
 }
 
