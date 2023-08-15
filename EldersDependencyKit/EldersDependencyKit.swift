@@ -35,6 +35,11 @@ public class DependencyContainer {
         shared.register(dependency)
     }
     
+    public static func register<T>(_ dependency: T, key: String) {
+        
+        shared.register(dependency, key: key)
+    }
+    
     public static func resolve<T>() -> T {
         
         shared.resolve()
