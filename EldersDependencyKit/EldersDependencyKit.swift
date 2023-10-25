@@ -65,9 +65,18 @@ public class DependencyContainer {
         shared.deregister(dependency)
     }
     
+    public static func deregister<T>(_ dependency: T, key: String) {
+        shared.deregister(dependency, key: key)
+    }
+    
     private func deregister<T>(_ dependency: T) {
         
         let key = String(describing: T.self)
+        dependencies.removeValue(forKey: key)
+    }
+    
+    private func deregister<T>(_ dependency: T, key: String) {
+        
         dependencies.removeValue(forKey: key)
     }
     
