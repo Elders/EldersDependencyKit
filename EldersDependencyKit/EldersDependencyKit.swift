@@ -65,8 +65,8 @@ public class DependencyContainer {
         shared.deregister(dependency)
     }
     
-    public static func deregister<T>(_ dependency: T, key: String) {
-        shared.deregister(dependency, key: key)
+    public static func deregister(key: String) {
+        shared.deregister(key: key)
     }
     
     private func deregister<T>(_ dependency: T) {
@@ -75,7 +75,7 @@ public class DependencyContainer {
         dependencies.removeValue(forKey: key)
     }
     
-    private func deregister<T>(_ dependency: T, key: String) {
+    private func deregister(key: String) {
         
         dependencies.removeValue(forKey: key)
     }
