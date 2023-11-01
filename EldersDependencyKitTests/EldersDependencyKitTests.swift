@@ -40,4 +40,25 @@ final class EldersDependencyKitTests: XCTestCase {
         
         @Inject var networkClient: INetworkClient
     }
+    
+    func testWeakResolve() {
+        
+        let key = "key"
+        
+        @WeakInjectByKey(key: key) var array: [Int]?
+        @WeakInject var array2: [Int]?
+        
+        XCTAssertNil(array)
+        XCTAssertNil(array2)
+    }
+    
+    func testDefaultValue() {
+        
+        let user1 = "Pesho"
+        let user2 = "Gosho"
+        
+        @Inject(defaultValue: user2) var dependency: String
+        
+        XCTAssertEqual(dependency, user2)
+    }
 }
